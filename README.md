@@ -59,7 +59,3 @@ To get started with this project, follow these steps:
 ## Requirements
 
 - [k6](https://k6.io/docs/getting-started/installation/) must be installed on your machine.
-
-## License
-
-This project is licensed under the MIT License.
