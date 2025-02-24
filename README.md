@@ -6,10 +6,26 @@ This project demonstrates how to use k6 for load testing a simple scenario targe
 
 ```
 k6-sample-project
+├── config
+│   ├── .env.config       # Environment configuration file
+│   └── example.env.config # Example environment configuration file
+├── data
+│   └── prompts.js        # Prompts for AI analysis
+├── reports
+│   ├── .gitkeep          # Placeholder to keep the directory in git
+│   └── k6_report.json    # k6 test report
 ├── src
-│   └── test.js        # k6 test script
-├── package.json       # npm configuration file
-└── README.md          # project documentation
+│   ├── aiModels          # AI model related files
+│   │   ├── aiModelAdapter.js
+│   │   ├── aiModelClient.js
+│   │   └── vertexAIAdapter.js
+│   └── k6Tests           # k6 test scripts
+│       ├── loadTest.js
+│       ├── test1.js
+│       └── test2.js
+├── .gitignore            # Git ignore file
+├── package.json          # npm configuration file
+└── README.md             # Project documentation
 ```
 
 ## Getting Started
@@ -28,10 +44,16 @@ To get started with this project, follow these steps:
    npm install
    ```
 
-3. **Run the k6 test**:
+3. **Set up environment variables**:
+   Copy the example environment configuration file and update it with your values:
+   ```
+   cp config/example.env.config config/.env.config
+   ```
+
+4. **Run the k6 test**:
    You can execute the test script using the following command:
    ```
-   k6 run src/test.js
+   npm test
    ```
 
 ## Requirements
